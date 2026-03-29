@@ -1,4 +1,4 @@
-== My own vim config
+## My own vim config
 
 Prerequisites:
 - `Plug` for the plugins
