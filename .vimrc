@@ -1,5 +1,16 @@
+set expandtab
+set tabstop=4
 set shiftwidth=4
 set autoread
+
+syntax on
+
+"Increasing line limit in registers when changing files
+set viminfo='100,<5000,s10,h
+
+"XML autocomplete closing tag: </ + ctrl-x + ctrl-o
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd BufRead,BufNewFile *.axaml set filetype=xml
 
 call plug#begin()
 
