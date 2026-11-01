@@ -12,6 +12,14 @@ set viminfo='100,<5000,s10,h
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd BufRead,BufNewFile *.axaml set filetype=xml
 
+"Prolog highlghting for .pro
+"let extension = expand('%:e')
+"if (extension == 'pro')
+"    setlocal filetype=pro
+"endif
+autocmd BufRead,BufNewFile *.pro set filetype=prolog
+autocmd FileType prolog setlocal syntax=prolog
+
 call plug#begin()
 
 Plug 'kaarmu/typst.vim'
@@ -63,3 +71,7 @@ highlight LspErrorHighlight ctermfg=Red ctermbg=None
 highlight LspErrorText ctermfg=Red ctermbg=None cterm=italic
 highlight PMenu ctermfg=White ctermbg=None cterm=italic
 highlight link markdownCode Identifier
+
+highlight TabLine ctermbg=None ctermfg=White cterm=None
+highlight TabLineSel ctermbg=None ctermfg=None cterm=bold
+highlight TabLineFill cterm=None
